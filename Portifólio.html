@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anthonela | Full Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --accent-color: #9f7aea;
+      --card-bg: #1e1e1e;
+      --border-color: #333;
+    }body.light {
+  --bg-color: #f4f4f4;
+  --text-color: #111;
+  --accent-color: #6b46c1;
+  --card-bg: #fff;
+  --border-color: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+header {
+  background: var(--card-bg);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+nav a {
+  color: var(--text-color);
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--accent-color);
+}
+#lang-btn, #theme-btn {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+#lang-btn:hover, #theme-btn:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+.container {
+  padding: 4rem 2rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+h1, h2 {
+  color: var(--accent-color);
+}
+section {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-in-out;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project {
+  background: var(--card-bg);
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.skills span {
+  display: inline-block;
+  background: var(--card-bg);
+  color: var(--text-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  margin: 0.3rem;
+  border: 1px solid var(--border-color);
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--border-color);
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anthonela</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div>
+      <button id="lang-btn">🌐 PT/EN</button>
+      <button id="theme-btn">🌓 Tema</button>
+    </div>
+  </header>  <div class="container">
+    <section id="home">
+      <h2 data-en="Hi, I'm Anthonela 👋" data-pt="Olá, sou Anthonela 👋">Hi, I'm Anthonela 👋</h2>
+      <p data-en="I'm a 13-year-old Full Stack Developer from Brazil. I started coding early because I’ve always been passionate about creating things with code."
+         data-pt="Tenho 13 anos e sou Desenvolvedora Full Stack do Brasil. Comecei a programar cedo porque sempre fui apaixonada por criar com códigos.">
+         I'm a 13-year-old Full Stack Developer from Brazil. I started coding early because I’ve always been passionate about creating things with code.</p>
+    </section><section id="about">
+  <h2 data-en="About Me" data-pt="Sobre Mim">About Me</h2>
+  <p data-en="I love learning new technologies and building creative projects. My focus is on web development and building practical apps that help people in real life."
+     data-pt="Adoro aprender novas tecnologias e criar projetos criativos. Meu foco é desenvolvimento web e construir apps práticos que ajudam as pessoas de verdade.">
+     I love learning new technologies and building creative projects. My focus is on web development and building practical apps that help people in real life.</p>
+</section>
+
+<section id="projects">
+  <h2 data-en="Projects" data-pt="Projetos">Projects</h2>
+  <div class="project">
+    <h3>💰 Finance+</h3>
+    <p data-en="Finance+ is a personal finance app designed to help anyone — especially young people — track expenses and income easily. With a friendly interface and simple tools, it helps users manage their money even without spreadsheet knowledge."
+       data-pt="O Finance+ é um app de finanças pessoais criado para ajudar qualquer pessoa — especialmente jovens — a acompanhar despesas e receitas com facilidade. Com uma interface amigável e ferramentas simples, ajuda a controlar o dinheiro mesmo sem planilhas.">
+       Finance+ is a personal finance app designed to help anyone — especially young people — track expenses and income easily. With a friendly interface and simple tools, it helps users manage their money even without spreadsheet knowledge.</p>
+    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js</p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 data-en="Skills" data-pt="Habilidades">Skills</h2>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Node.js</span>
+    <span>C++</span>
+    <span>C#</span>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 data-en="Contact" data-pt="Contato">Contact</h2>
+  <p data-en="Let's connect! You can find me on social media or email me to collaborate on something cool."
+     data-pt="Vamos nos conectar! Você pode me encontrar nas redes sociais ou mandar um e-mail para colaborar em algo legal.">
+     Let's connect! You can find me on social media or email me to collaborate on something cool.</p>
+  <p>Email: <a href="mailto:your@email.com" style="color: var(--accent-color)">anthonelagomesxavier@email.com</a></p>
+</section>
+
+  </div>  <footer>
+    &copy; 2025 Anthonela. All rights reserved.
+  </footer>  <script>
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    const langBtn = document.getElementById('lang-btn');
+    let isEnglish = true;
+    langBtn.addEventListener('click', () => {
+      isEnglish = !isEnglish;
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-pt');
+      });
+    });
+
+    // Theme toggle
+    const themeBtn = document.getElementById('theme-btn');
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+    });
+  </script></body>
+</html>
